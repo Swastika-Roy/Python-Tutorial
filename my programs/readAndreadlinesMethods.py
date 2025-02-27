@@ -9,5 +9,5 @@ while True:
     m2 = line.split(",")[1]
     m3 = line.split(",")[2]
     print(f"marks of student {i} in Maths : {m1}")
-    print(f"marks of student {i} in Maths : {m2}")
-    print(f"marks of student {i} in Maths : {m3}")
+    print(f"marks of student {i} in computer : {m2}")
+    print(f"marks of student {i} in science : {m3}")
