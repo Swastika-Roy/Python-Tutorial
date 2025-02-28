@@ -1,5 +1,5 @@
 with open('sample.txt','w') as f:
-    f.write("Hello Everyone")
+    f.write('Proud of India')
     f.truncate(5)
 
 with open('Sample.txt','r') as f:
