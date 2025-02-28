@@ -6,3 +6,5 @@ print("addition of  ",a," and ", b," is ",a+b)
 print("multiplication of  ",a," and  ", b," is ",a*b)
 print("remainder of  ",a," and ", b," is ",a%b)
 print("power of  ",a," and ", b," is ",a**b)
+
+
