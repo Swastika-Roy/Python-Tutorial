@@ -19,7 +19,8 @@ print(obj.name)
 print(obj._funname())
 
 
-#Calling by object of Meeting Class
+#Calling by object of Meeting
+# Class
 print(obj1.name)
 print(obj1._funname())
 
