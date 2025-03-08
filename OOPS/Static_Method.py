@@ -16,4 +16,5 @@ A = Math(5)
 print(A.num)
 A.addtonum(6)
 print(A.num)
+
 print(A.add(2,3))
