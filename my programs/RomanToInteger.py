@@ -27,7 +27,6 @@ def roman_to_int(s):
         else:
             total += current_value
         prev_value = current_value
-
     return total
 
 # 🔁 Example usage
