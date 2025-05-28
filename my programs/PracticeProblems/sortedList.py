@@ -1,5 +1,5 @@
 def isSorted(l):
     return l == sorted(l)
 
-l = [1,4,5,6,2]
+l = [1,2,3,0]
 print(isSorted(l))

@@ -1,5 +1,5 @@
 def remove(l):
     return list(set(l))
 
-l = [1,2,2,3,4,5,5,3]
+l = [11,2,2,11,33,33]
 print(remove(l))
