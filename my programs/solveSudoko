@@ -1,0 +1,54 @@
+class Solution:
+    def isSafe(self, mat, i, j, num, row, col, box):
+        box_index = (i // 3) * 3 + j // 3
+        bit = 1 << num
+        if (row[i] & bit) or (col[j] & bit) or (box[box_index] & bit):
+            return False
+        return True
+
+    def sudokuSolverRec(self, mat, i, j, row, col, box):
+        n = len(mat)
+        if i == n - 1 and j == n:
+            return True
+        if j == n:
+            i += 1
+            j = 0
+        if mat[i][j] != 0:
+            return self.sudokuSolverRec(mat, i, j + 1, row, col, box)
+
+        for num in range(1, n + 1):
+            if self.isSafe(mat, i, j, num, row, col, box):
+                bit = 1 << num
+                mat[i][j] = num
+                row[i] |= bit
+                col[j] |= bit
+                box_index = (i // 3) * 3 + j // 3
+                box[box_index] |= bit
+
+                if self.sudokuSolverRec(mat, i, j + 1, row, col, box):
+                    return True
+
+                # Backtrack
+                mat[i][j] = 0
+                row[i] &= ~bit
+                col[j] &= ~bit
+                box[box_index] &= ~bit
+
+        return False
+
+    def solveSudoku(self, mat):
+        n = len(mat)
+        row = [0] * n
+        col = [0] * n
+        box = [0] * n
+
+        for i in range(n):
+            for j in range(n):
+                if mat[i][j] != 0:
+                    bit = 1 << mat[i][j]
+                    row[i] |= bit
+                    col[j] |= bit
+                    box_index = (i // 3) * 3 + j // 3
+                    box[box_index] |= bit
+
+        self.sudokuSolverRec(mat, 0, 0, row, col, box)
