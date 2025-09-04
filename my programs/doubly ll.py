@@ -37,12 +37,3 @@ def printList(node):
     print()
 
 
-if __name__ == "__main__":
-    head = Node(1)
-    head.next = Node(2)
-    head.next.prev = head
-    head.next.next = Node(3)
-    head.next.next.prev = head.next
-
-    head = reverse(head)
-    printList(head)
