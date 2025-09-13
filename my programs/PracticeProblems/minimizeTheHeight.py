@@ -16,9 +16,3 @@ def getMinDiff(arr, k):
     return res
 
 
-if __name__ == "__main__":
-    k = 2
-    arr = [1, 5, 8, 10]
-
-    ans = getMinDiff(arr, k)
-    print(ans)
