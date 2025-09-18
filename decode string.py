@@ -23,7 +23,7 @@ def decodedString(s):
             p = int(num)
 
             # Append the substring to the result
-            #string, repeat it to the required number of times.
+            # string, repeat it to the required number of times.
             res += temp * p
 
     return res
